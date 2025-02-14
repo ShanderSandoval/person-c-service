@@ -87,7 +87,7 @@ jobs:
             echo "📌 Iniciando el nuevo contenedor con variables de entorno..."
             sudo docker run -d \
               --name ${{ secrets.DOCKER_IMAGE_NAME }} \
-              -p 80:10011 \
+              -p 10011:10011 \
               -e SPRING_NEO4J_URI=${{ secrets.SPRING_NEO4J_URI }} \
               -e SPRING_NEO4J_AUTHENTICATION_USERNAME=${{ secrets.SPRING_NEO4J_AUTHENTICATION_USERNAME }} \
               -e SPRING_NEO4J_AUTHENTICATION_PASSWORD=${{ secrets.SPRING_NEO4J_AUTHENTICATION_PASSWORD }} \
