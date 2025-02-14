@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: person-command-service
+  neo4j:
+    uri: neo4j+s://266886b0.databases.neo4j.io
+    authentication:
+      username: neo4j
+      password: ZYmTAfNsNtsplQeQ9D_DEl-XYow0ZniFhIJGftJkU80
+  kafka:
+    bootstrap-servers: localhost:10094
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: true
+server:
+  address: '0.0.0.0'
+  port: 10011
+env:
+  kafka:
+    topicEvent: person-event
