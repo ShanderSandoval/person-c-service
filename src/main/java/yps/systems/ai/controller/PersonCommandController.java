@@ -14,6 +14,7 @@ import yps.systems.ai.repository.IPersonRepository;
 
 import java.util.Optional;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/command/personService")
 public class PersonCommandController {
